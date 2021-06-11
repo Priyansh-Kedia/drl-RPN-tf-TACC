@@ -1,3 +1,5 @@
+# NOTE: THIS REPOSITORY IS A COPY OF THE ORIGINAL https://github.com/aleksispi/drl-rpn-tf, WITH SOME CHANGES. THIS IS COMPLETELY FOR EVALUATION PURPOSES.
+
 # drl-RPN: Deep Reinforcement Learning of Region Proposal Networks for Object Detection
 ![vis-drl-rpn](https://user-images.githubusercontent.com/32370520/61851905-6e583200-aeb8-11e9-85c9-bf0350093a2f.png)
 
