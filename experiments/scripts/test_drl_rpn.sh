@@ -59,10 +59,10 @@ esac
 # Set up base weights paths according to your own system
 case ${DATASET} in
   pascal_voc_0712_test)
-    WEIGHTS_PATH=/home/priyansh-kedia/Documents/MachineLearning/drl-rpn-tf/data/drl-rpn-voc2007-2012-trainval-plus-2007test/vgg16_2012_drl_rpn_iter_110000.ckpt
+    WEIGHTS_PATH=/home1/08213/pkedia/drl-RPN-tf-TACC/drl-rpn-voc2007-2012-trainval-plus-2007test/vgg16_2012_drl_rpn_iter_110000.ckpt
     ;;
   *)
-    WEIGHTS_PATH=/home/priyansh-kedia/Documents/MachineLearning/drl-rpn-tf/data/drl-rpn-voc2007-2012-trainval/vgg16_drl_rpn_iter_110000.ckpt
+    WEIGHTS_PATH=/home1/08213/pkedia/drl-RPN-tf-TACC/drl-rpn-voc2007-2012-trainval-plus-2007test/vgg16_drl_rpn_iter_110000.ckpt
     ;;
 esac
 

@@ -66,24 +66,24 @@ esac
 # is used for loading existing weights
 case ${DATASET} in
   pascal_voc_0712_test)
-    SAVE_PATH=/home/priyansh-kedia/Documents/MachineLearning/drl-rpn-tf/data/output-weights/drl-rpn-voc2007-2012-trainval+2007test/
+    SAVE_PATH=/home1/08213/pkedia/drl-RPN-tf-TACC/output-weights/drl-rpn-voc2007-2012-trainval+2007test/
     case ${USE_POST} in
       0)
-        WEIGHTS_PATH=/home/priyansh-kedia/Documents/MachineLearning/drl-rpn-tf/data/fr-rcnn-voc2007-2012-trainval+2007test/vgg16_2012_faster_rcnn_iter_180000.ckpt
+        WEIGHTS_PATH=/home1/08213/pkedia/drl-RPN-tf-TACC/fr-rcnn-voc2007-2012-trainval+2007test/vgg16_2012_faster_rcnn_iter_180000.ckpt
         ;;
       *)
-        WEIGHTS_PATH=/home/priyansh-kedia/Documents/MachineLearning/drl-rpn-tf/data/drl-rpn-voc2007-2012-trainval+2007test/vgg16_2012_drl_rpn_iter_110000.ckpt
+        WEIGHTS_PATH=/home1/08213/pkedia/drl-RPN-tf-TACC/drl-rpn-voc2007-2012-trainval+2007test/vgg16_2012_drl_rpn_iter_110000.ckpt
         ;;
     esac
     ;;
   *)
-    SAVE_PATH=/home/priyansh-kedia/Documents/MachineLearning/drl-rpn-tf/data/output-weights/drl-rpn-voc2007-2012-trainval/
+    SAVE_PATH=/home1/08213/pkedia/drl-RPN-tf-TACC/output-weights/drl-rpn-voc2007-2012-trainval/
     case ${USE_POST} in
       0)
-        WEIGHTS_PATH=/home/priyansh-kedia/Documents/MachineLearning/drl-rpn-tf/data/fr-rcnn-voc2007-2012-trainval/vgg16_faster_rcnn_iter_180000.ckpt
+        WEIGHTS_PATH=/home1/08213/pkedia/drl-RPN-tf-TACC/data/fr-rcnn-voc2007-2012-trainval/vgg16_faster_rcnn_iter_180000.ckpt
         ;;
       *)
-        WEIGHTS_PATH=/home/priyansh-kedia/Documents/MachineLearning/drl-rpn-tf/data/drl-rpn-voc2007-2012-trainval/vgg16_drl_rpn_iter_110000.ckpt
+        WEIGHTS_PATH=/home1/08213/pkedia/drl-RPN-tf-TACC/drl-rpn-voc2007-2012-trainval/vgg16_drl_rpn_iter_110000.ckpt
         ;;
     esac
     ;;
