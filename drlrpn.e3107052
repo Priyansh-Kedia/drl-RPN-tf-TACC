@@ -1,0 +1,74 @@
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - pip==10.0.0
+
+Current channels:
+
+  - https://repo.anaconda.com/pkgs/main/linux-64
+  - https://repo.anaconda.com/pkgs/main/noarch
+  - https://repo.anaconda.com/pkgs/r/linux-64
+  - https://repo.anaconda.com/pkgs/r/noarch
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+You are using pip version 9.0.3, however version 21.1.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z10nms_kernelifPKfPy' for 'sm_52'
+ptxas info    : Function properties for _Z10nms_kernelifPKfPy
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 24 registers, 1280 bytes smem, 344 bytes cmem[0], 12 bytes cmem[2]
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+In file included from /home1/08213/pkedia/anaconda3/envs/env/lib/python2.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1822,
+                 from /home1/08213/pkedia/anaconda3/envs/env/lib/python2.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /home1/08213/pkedia/anaconda3/envs/env/lib/python2.7/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from nms/gpu_nms.cpp:539:
+/home1/08213/pkedia/anaconda3/envs/env/lib/python2.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it with " \
+  ^~~~~~~
++ set -e
++ export PYTHONUNBUFFERED=True
++ PYTHONUNBUFFERED=True
++ GPU_ID=0
++ DATASET=pascal_voc_0712
++ USE_HIST=1
++ DET_START=20000
++ USE_POST=0
++ ITERS=2700
++ array=($@)
++ len=6
++ EXTRA_ARGS=
++ EXTRA_ARGS_SLUG=
++ NET=vgg16
++ case ${DATASET} in
++ TRAIN_IMDB=voc_2007_trainval+voc_2012_trainval
++ TEST_IMDB=voc_2007_test
++ STEPSIZE='[80000]'
++ DRL_RPN_STEPSIZE=90000
++ NBR_CLASSES=21
++ ANCHORS='[8,16,32]'
++ RATIOS='[0.5,1,2]'
++ case ${DATASET} in
++ SAVE_PATH=/home1/08213/pkedia/drl-RPN-tf-TACC/output-weights/drl-rpn-voc2007-2012-trainval/
++ case ${USE_POST} in
++ WEIGHTS_PATH=/home1/08213/pkedia/drl-RPN-tf-TACC/data/fr-rcnn-voc2007-2012-trainval/vgg16_faster_rcnn_iter_180000.ckpt
++ '[' '!' -f .index ']'
++ [[ ! -z '' ]]
++ CUDA_VISIBLE_DEVICES=0
++ time python ./tools/trainval_net.py --weight /home1/08213/pkedia/drl-RPN-tf-TACC/data/fr-rcnn-voc2007-2012-trainval/vgg16_faster_rcnn_iter_180000.ckpt --save /home1/08213/pkedia/drl-RPN-tf-TACC/output-weights/drl-rpn-voc2007-2012-trainval/ --imdb voc_2007_trainval+voc_2012_trainval --imdbval voc_2007_test --iters 2700 --cfg experiments/cfgs/drl-rpn-vgg16.yml --net vgg16 --use_hist 1 --det_start 20000 --use_post 0 --set ANCHOR_SCALES '[8,16,32]' ANCHOR_RATIOS '[0.5,1,2]' NBR_CLASSES 21 TRAIN.STEPSIZE '[80000]' DRL_RPN_TRAIN.STEPSIZE 90000
+/home1/08213/pkedia/drl-RPN-tf-TACC/tools/../lib/model/config.py:438: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  yaml_cfg = edict(yaml.load(f))
+2021-06-16 13:43:44.066660: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2021-06-16 13:43:44.066735: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2021-06-16 13:43:44.066755: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2021-06-16 13:43:44.066770: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2021-06-16 13:43:44.066798: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+163472.65user 4450.83system 2:02:06elapsed 2291%CPU (0avgtext+0avgdata 7671556maxresident)k
+3910016inputs+5804400outputs (42major+112938589minor)pagefaults 0swaps
